@@ -7,7 +7,14 @@
   tictactoe =  tictactoe.join(',');
   console.log(tictactoe);
 
-  /**
+  var checkForWin = function(){
+    if (tictactoe.includes(player1.pick)) {
+      console.log('player1 wins');
+    } else if (tictactoe.includes(player2.pick)) {
+      console.log('player2 wins');
+    }
+  };
+
   function checkForWin(){
      if (tictactoe.includes(player1.pick)) {
        console.log('player1 wins');
@@ -39,13 +46,10 @@
       player2.pick.push(coordinate);
       $square.addClass( 'green' );
     }
-    checkForWin();
-    turnCounter++;
-    if (turnCounter > 4) {
+    if ((player1.pick.length === 3) || (player1.pick.length === 3)) {
       checkForWin();
-    } else if (turnCounter === 9) {
-      console.log('draw');
     }
+    turnCounter++;
     console.log(turnCounter);
   }
 
@@ -55,13 +59,3 @@
   // Event listener
   $($gameboard).on('click', 'div', getPick);
   // winning combinations (there must be a smarter way!)
-
-
-  var checkForWin = function(){
-    if (tictactoe.includes(player1.pick)) {
-      console.log('player1 wins');
-    } else if (tictactoe.includes(player2.pick)) {
-      console.log('player2 wins');
-    }
-  };
-*/
