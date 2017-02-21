@@ -1,21 +1,29 @@
-//create row of three
-// function createRow(){
-//   var row = [];
-//   for(var i = 1; i <= 3 ; i++){
-//     row.push(i);
-//   }
-//   return (row);
-// }
+var $gameboard = $('.gameboard');
+var player1 = {
+  name: "Johnny",
+  pick: [] // Push coordinate into array for check
+};
 
+var player2 = {
+  name: "Johnny",
+  pick: [] // Push coordinate into array for check
+};
 
-function createBoard() {
-  var gameboard = document.querySelector('.gameboard');
-  for (var k = 1; k <= 9; k++) {
-    var square = document.createElement('div');
-    square.innerHTML = k;
-    square.classList.add('square');
-    gameboard.appendChild(square);
+var turnCounter = 0;
+function getPick(event){
+  var coordinate = $(event.target).data( "coordinate" );
+  $square = $(event.target);
+  if (turnCounter % 2 !== 0) {
+    player1.pick.push(coordinate);
+    $square.addClass( 'blue' );
+  } else {
+    player2.pick.push(coordinate);
+    $square.addClass( 'green' );
   }
+  turnCounter++;
+  console.log(turnCounter);
+
 }
 
-createBoard();
+// Event listener
+$($gameboard).on('click', 'div', getPick);
