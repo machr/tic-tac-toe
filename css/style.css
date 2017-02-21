@@ -36,7 +36,7 @@ div {
 }
 .square {
   width: 33.33333%;
-  height: 200px;*/
+  height: 200px;
   text-align: center;
   /*padding: 1em;*/
   font-size: 3em;
@@ -53,8 +53,10 @@ div {
 
 .blue {
   background-color: blue;
+  pointer-events: none;
 }
 
 .green {
   background-color: green;
+  pointer-events: none;
 }
