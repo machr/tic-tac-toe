@@ -1,12 +1,21 @@
   var $gameboard = $('.gameboard');
   var tictactoe = [
-    ['A1A2A3'],['B1B2B3'],['C1C2C3'],
-    ['A1B1C1'],['A2B2C2'],['A3B3C3'],
+    'A1A2A3','B1B2B3','C1C2C3',
+    'A1B1C1','A2B2C2','A3B3C3',
+    'A1B2C3','A3B2C1'
    ];
 
-  tictactoe =  tictactoe.join(',');
-  console.log(tictactoe);
+   // winning pick
+   var winningPick = ['A2','B2','C2'];
+   var winningPick = winningPick.join('');
 
+
+  //idea: use split('') to compare arrays for win!
+  // sort array for combinations?
+  if ( tictactoe.includes('winningPick') ) {
+    console.log(working);
+  }
+  /**
   var checkForWin = function(){
     if (tictactoe.includes(player1.pick)) {
       console.log('player1 wins');
@@ -14,6 +23,7 @@
       console.log('player2 wins');
     }
   };
+
 
   function checkForWin(){
      if (tictactoe.includes(player1.pick)) {
@@ -59,3 +69,4 @@
   // Event listener
   $($gameboard).on('click', 'div', getPick);
   // winning combinations (there must be a smarter way!)
+*/
