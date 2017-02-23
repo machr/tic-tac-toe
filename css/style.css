@@ -1,3 +1,9 @@
+/* Import Font */
+@font-face {
+  font-family: 'Lazer';
+  src: url('../css/Lazer84.ttf');
+}
+
 body {
   margin:0;
 }
@@ -7,12 +13,12 @@ body {
   height: 100%;
   min-height: 100vh;
   padding: 0;
-  font-family: 'Helvetica', sans-serif;
+  font-family:'Helvetica', sans-serif;
 
-  background: rgb(61,11,151); /* Old browsers */
-  background: -moz-linear-gradient(top,  rgba(61,11,151,1) 0%, rgba(61,11,151,1) 40%, rgba(38,30,51,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  rgba(61,11,151,1) 0%,rgba(61,11,151,1) 40%,rgba(38,30,51,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  rgba(61,11,151,1) 0%,rgba(61,11,151,1) 40%,rgba(38,30,51,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: rgb(61,11,151);
+  background: -moz-linear-gradient(top,  rgba(201, 16, 147,1) 0%, rgba(201, 16, 147,1) 25%, rgba(61,11,151, 1) 100%);
+  background: -webkit-linear-gradient(top,  rgba(201, 16, 147,1) 0%,rgba(201, 16, 147,1) 25%,rgba(61,11,151, 1) 100%);
+  background: linear-gradient(to bottom,  rgba(201, 16, 147,1) 0%,rgba(201, 16, 147,1) 25%,rgba(61,11,151, 1) 100%);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -50,15 +56,22 @@ div {
 }
 
 .game-won {
+  font-family: 'Lazer', sans-serif;
   padding: 1em 1em;
   width: 60%;
   text-align: center;
-  color: yellow;
   font-size: 60px;
   position: absolute;
   top: 25%;
   left: 15%;
-  background-color: rgba(255, 0, 0, 0.76);
+  color: lawngreen;
+  /*
+  background: rgb(20,89,242);
+  background: -moz-linear-gradient(top,  rgba(20,89,242,1) 0%, rgba(255,255,255,1) 50%, rgba(112,12,255,1) 51%, rgba(219,54,164,1) 68%, rgba(255,255,255,1) 100%);
+  background: linear-gradient(to bottom,  rgba(20,89,242,1) 0%,rgba(255,255,255,1) 50%,rgba(112,12,255,1) 51%,rgba(219,54,164,1) 68%,rgba(255,255,255,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  */
 }
 
 .square {

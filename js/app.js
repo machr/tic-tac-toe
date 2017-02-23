@@ -7,34 +7,20 @@ var winningCombinations = [
   'A1B2C3','A3B2C1'
  ];
 
-// var namePlayer1 = $('.player1-name');
-// var namePlayer2 = $('.player2-name');
-//
-// function getPlayerName(e){
-//   if(e.which === 13) {
-//     var playerName = $(namePlayer1).val();
-//     console.log(player1.name);
-//   }
-// }
-
  var player1 = {
    name: "Johnny",
    id: 1,
-   picks: [] // Push coordinate into array for check
+   picks: []
  };
  var player2 = {
    name: "Bob",
    id: 2,
-   picks: [] // Push coordinate into array for check
+   picks: []
  };
-
- // TODO:
-// update README.md
-// Add VCR font
 
 var checkForWin = function(player){
   if ( winningCombinations.includes( player.picks.sort().join('') ) ) {
-    $('body').append($('<h1 class="game-won">PLAYER ' + player.id + ' WINS! </h1>'));
+    $('body').append($('<h1 class="game-won">PLAYER  ' + player.id + '  WINS! </h1>'));
   }
 };
 
@@ -61,9 +47,5 @@ function getPick(event){
   turnCounter++;
 }
 
-// Check for draw!
-
-
 // Event listener
 $($gameboard).on('click', 'div', getPick);
-// winning combinations (there must be a smarter way!)
