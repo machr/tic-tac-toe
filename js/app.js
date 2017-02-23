@@ -40,12 +40,17 @@
     $square = $(event.target);
     if (turnCounter % 2 !== 0) {
       player1.picks.push(coordinate);
-      $square.addClass( 'blue' );
+      $square.addClass( 'player-one' );
       currentPlayer = player1;
+      $('.gameboard, .square').removeClass( 'glow-purple' );
+      $('.gameboard, .square').addClass( 'glow-blue' );
+
     } else {
       player2.picks.push(coordinate);
-      $square.addClass( 'green' );
+      $square.addClass( 'player-two' );
       currentPlayer = player2;
+      $('.gameboard, .square').removeClass( 'glow-blue' );
+      $('.gameboard, .square').addClass( 'glow-purple' );
     }
     if (turnCounter >= 5) {
       checkForWin(currentPlayer);
