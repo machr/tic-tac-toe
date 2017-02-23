@@ -1,72 +1,59 @@
   var $gameboard = $('.gameboard');
-  var tictactoe = [
+  var winningCombinations = [
     'A1A2A3','B1B2B3','C1C2C3',
     'A1B1C1','A2B2C2','A3B3C3',
     'A1B2C3','A3B2C1'
    ];
+  var turnCounter = 1;
+  var currentPlayer;
+
+   var player1 = {
+     name: "Johnny",
+     id: 1,
+     picks: [] // Push coordinate into array for check
+   };
+   var player2 = {
+     name: "Bob",
+     id: 2,
+     picks: [] // Push coordinate into array for check
+   };
 
    // winning pick
-   var winningPick = ['A2','B2','C2'];
-   var winningPick = winningPick.join('');
+  //  var winningPick = ['A2','B2','C2'];
+  //  var winningPick = winningPick.join('');
 
+   // TODO:
+  // sort player.pick array, then join('')
+  // Then conditionals for winningCombinations.includes(player.pick.sort().join);
+  // update README.md
 
-  //idea: use split('') to compare arrays for win!
-  // sort array for combinations?
-  if ( tictactoe.includes('winningPick') ) {
-    console.log(working);
-  }
-  /**
-  var checkForWin = function(){
-    if (tictactoe.includes(player1.pick)) {
-      console.log('player1 wins');
-    } else if (tictactoe.includes(player2.pick)) {
-      console.log('player2 wins');
+  // rethink if objects are needed!
+
+  var checkForWin = function(player){
+    if (winningCombinations.includes(player.picks.sort().join(''))) {
+      console.log('player ' + player.id + ' wins');
     }
   };
 
-
-  function checkForWin(){
-     if (tictactoe.includes(player1.pick)) {
-       console.log('player1 wins');
-     } else if (tictactoe.includes(player2.pick)) {
-       console.log('player2 wins');
-     }
-   }
-
-  var player1 = {
-    name: "Johnny",
-    pick: [] // Push coordinate into array for check
-  };
-
-  var player2 = {
-    name: "Johnny",
-    pick: [] // Push coordinate into array for check
-  };
-
-
-
-  var turnCounter = 0;
   function getPick(event){
     var coordinate = $(event.target).data( "coordinate" );
     $square = $(event.target);
     if (turnCounter % 2 !== 0) {
-      player1.pick.push(coordinate);
+      player1.picks.push(coordinate);
       $square.addClass( 'blue' );
+      currentPlayer = player1;
     } else {
-      player2.pick.push(coordinate);
+      player2.picks.push(coordinate);
       $square.addClass( 'green' );
+      currentPlayer = player2;
     }
-    if ((player1.pick.length === 3) || (player1.pick.length === 3)) {
-      checkForWin();
+    if (turnCounter >= 5) {
+      checkForWin(currentPlayer);
     }
-    turnCounter++;
     console.log(turnCounter);
+    turnCounter++;
   }
-
-
-  // compare player's pick array with tictactoe
 
   // Event listener
   $($gameboard).on('click', 'div', getPick);
   // winning combinations (there must be a smarter way!)
-*/
