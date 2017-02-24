@@ -64,14 +64,14 @@ div {
   position: absolute;
   top: 25%;
   left: 15%;
-  color: lawngreen;
-  /*
+  /*color: lawngreen;*/
+
   background: rgb(20,89,242);
   background: -moz-linear-gradient(top,  rgba(20,89,242,1) 0%, rgba(255,255,255,1) 50%, rgba(112,12,255,1) 51%, rgba(219,54,164,1) 68%, rgba(255,255,255,1) 100%);
   background: linear-gradient(to bottom,  rgba(20,89,242,1) 0%,rgba(255,255,255,1) 50%,rgba(112,12,255,1) 51%,rgba(219,54,164,1) 68%,rgba(255,255,255,1) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  */
+
 }
 
 .square {
