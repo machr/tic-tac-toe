@@ -18,7 +18,7 @@ Early in the planning process I decided that I would focus less on building a bu
 
 jQuery is a pleasure to work with. The amount of code ends up being a lot less then writing 'pure' JavaScript and for a project of this size, speed and file sizes aren't my biggest concern.
 
- **Lessons I've learned **
+ **Lessons I've learned**
 
 - I need to sketch my thoughs out to better understand them.
 - A algorithm flow-chart confused me more than gave me answers in this project - even though I made it myself. I scrapped that tool in this project but will give it another go in the next.
