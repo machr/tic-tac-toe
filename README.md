@@ -1,6 +1,6 @@
 # Tic Tac Toe - 80s edition
 
-![tictactoe](/Users/machr/Desktop/tictactoe.png)
+![tictactoe](README-images/tictactoe.png)
 
 This project was coded in HTML, CSS and jQuery 3.3.1
 
@@ -18,7 +18,7 @@ jQuery is a pleasure to work with. The amount of code ends up being a lot less t
 
 - I need to sketch my thoughs out to better understand them. 
 - A algorithm flow-chart confused me more than gave me answers in this project - even though I made it myself. I scrapped that tool in this project but will give it another go in the next.
-- I like building a quick prototype, so get ideas for layout and interaction. See below![early_prototype](/Users/machr/Desktop/early_prototype.png)
+- I like building a quick prototype, so get ideas for layout and interaction. See below![early_prototype](README-images/early_prototype.png)
 - There are so many great answers on Internet for any kind of question you can ask in coding, but it takes a bit of insight to recognize how smart they are. I found several code snippets on StackOverflow that would solve my problem. Often I liked the thought-process behind, but not the actual code - it would help me write my own solution, with their idea in mind. I've copy/pasted too much code in the past, and don't want to do that again. 
 - CSS3 Animations and transitions are the business. Everyone should learn them. There are many great tools that can help with syntax and vendor prefixes. 
   I used [ColorZilla]( http://www.colorzilla.com/gradient-editor/) help me make the gradients from my photoshop mock-up into CSS3 code.
@@ -49,6 +49,7 @@ I also need to learn to break down problems in atomic parts to really gain a ful
 
 - Re-read complicated code sections, i.e Regex expressions in functions
 - Redesign X & O symbols
+- Keep score of winning
 - Add input fields to get player names
 - Show player turn (could be a toggleClass based on turnCounter)
 - Give players avatar options
