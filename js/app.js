@@ -1,11 +1,13 @@
 var $gameboard = $('.gameboard');
 var turnCounter = 1;
+var hasWon = false;
 var currentPlayer;
 var winningCombinations = [
-  'A1A2A3','B1B2B3','C1C2C3',
-  'A1B1C1','A2B2C2','A3B3C3',
-  'A1B2C3','A3B2C1'
+  '123','456','789',
+  '147','258', '369',
+  '159','357'
  ];
+
 
  var player1 = {
    name: "Johnny",
@@ -18,8 +20,22 @@ var winningCombinations = [
    picks: []
  };
 
-var checkForWin = function(player){
-  if ( winningCombinations.includes( player.picks.sort().join('') ) ) {
+ var pickMatching = function (player){
+    for(var i = 0; i < winningCombinations.length; i++) {
+      var combo = winningCombinations[i];
+      var regexPattern = '[' + combo + ']';
+      var regEx = new RegExp(regexPattern, 'g');
+      var matchedNumbers = player.picks.sort().join('').match(regEx);
+      if (matchedNumbers !== null && matchedNumbers.join('') === combo) {
+        hasWon = true;
+        break;
+      }
+    }
+    return hasWon;
+ };
+
+var checkForWin = function(player) {
+  if (pickMatching(player)) {
     $('body').append($('<h1 class="game-won">PLAYER  ' + player.id + '  WINS! </h1>'));
   }
 };
