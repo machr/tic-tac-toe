@@ -38,7 +38,9 @@ I also need to learn to break down problems in atomic parts to really gain a ful
 
 **Bugs and Unsolved Issues**
 
-- Game does not consider 'Draw' scenarios
+- Game does not consider 'Draw' scenarios.
+
+- Games does not reset on win.
 
 - Game is using a lot of fixed dimensions and is not responsive at all. 
 
