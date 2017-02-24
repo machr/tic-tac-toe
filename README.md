@@ -49,6 +49,7 @@ I also need to learn to break down problems in atomic parts to really gain a ful
 
 - Re-read complicated code sections, i.e Regex expressions in functions
 - Redesign X & O symbols
+- Keep score of winning
 - Add input fields to get player names
 - Show player turn (could be a toggleClass based on turnCounter)
 - Give players avatar options
